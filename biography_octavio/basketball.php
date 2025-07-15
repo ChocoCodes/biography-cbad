@@ -1,3 +1,6 @@
+<?php 
+    $Title = "Lego"
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

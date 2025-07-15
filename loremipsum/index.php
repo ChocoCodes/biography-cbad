@@ -1,3 +1,7 @@
+<?php 
+    $Title = "Home";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="test.css">
-    <title>About Me</title>
+    <title>About Me | <?php echo "$Title" ?></title>
     <?php 
         $Firstname = "John Roland";
         $Lastname = "Octavio";
@@ -18,8 +22,14 @@
     <h1>ABOUT ME PAGE</h1>
     <h2>This page is all about me</h2>
     <?php 
+        $Headers = ["Home" => "index.php", "Hobbies" => "hobbies.php", "Projects" => "projects.php"];
+
         echo "Hi I'm: $Firstname $Lastname <br/>";
         echo "I was born in $Birthmonth $Birthdate, $Birthyear <br/>";
+
+        foreach($Headers as $Header) {
+            echo "<a alt="$Header">$Header</a>"
+        }
     ?>
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdgVBsGH456HK8ahK9UhS7e4ndjHC06HyNh8FOWMuhB5OOwyM6VgCCTKaHBuvdu8pCz84&usqp=CAU" alt="Its Showtime" />
     <p>Bigay mo sakin saber tol papatayin ko si wise level 4. Gusto ko lang sabihin na hindi madali yung ginagawa namin dito sa Showtime. Sorry direk sorry... Sample! Sample!</p>

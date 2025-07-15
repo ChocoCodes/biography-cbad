@@ -1,3 +1,6 @@
+<?php 
+    $Title = "Lego"
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../loremipsum/test.css">
-    <title>Hobbies | Lego</title>
+    <title>Hobbies | <?php echo $Title ?></title>
 </head>
 <body>
     <h1>Lego Building Blocks</h1>
