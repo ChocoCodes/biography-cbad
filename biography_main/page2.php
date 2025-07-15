@@ -2,6 +2,7 @@
     $Title = "Hobbies";
     $ListItems = ["Building Legos", "Basketball", "Coding", "Muay Thai", "Gaming"];
     $Headers = ["Home" => "page1.php", "Hobbies" => "page2.php", "Projects" => "page3.php"];
+    $PageDescription = "These are my hobbies—a mix of creative, athletic, and mentally engaging activities that I enjoy in my free time, with each offering a unique experience that keeps me balanced, challenged, and inspired in different ways."
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,11 +12,15 @@
     <title>About Me | <?php echo $Title; ?></title>
 </head>
 <body>
-    <?php 
-        foreach($Headers as $Header => $Link) {
-            echo "<a href=\"$Link\" alt=\"$Header\">{$Header}</a>\n";
-        }
-    ?>
+    <header>
+        <?php 
+            echo "<h1>{$Title} Page</h1>";
+            echo "<p>{$PageDescription}</p>";
+            foreach($Headers as $Header => $Link) {
+                echo "<a href=\"$Link\" alt=\"$Header\">{$Header}</a>\n";
+            }
+        ?>
+    </header>
     <h1>My Hobbies:</h1>
     <ul>
         <?php 
@@ -37,7 +42,7 @@
     <div>
         <h1><?php echo $ListItems[2]; ?></h1>
         <img src="https://avatars.githubusercontent.com/u/121501140?v=4" alt="Image of CTO" />
-        <p>Served as the Chief Technology Officer of Google Developer Groups on Campus - USLS A.Y 24-25</p>
+        <p>Served as the Chief Technology Officer of Google Developer Groups on Campus - USLS (A.Y 24-25)</p>
     </div>
     <div>
         <h1><?php echo $ListItems[3]; ?></h1>

@@ -8,6 +8,9 @@
     $ZodiacSign = "Gemini";
     $Status = "Secret";
     $Headers = ["Home" => "page1.php", "Hobbies" => "page2.php", "Projects" => "page3.php"];
+    $Learning = "Full Stack Development";
+    $PageDescription = "This page contains my basic personal information, including my name, birthday, and other introductory details about me.";
+    $FavoriteMovie = "The Dictator";
 ?>
 
 <!DOCTYPE html>
@@ -19,23 +22,31 @@
     <title>About Me | <?php echo $Title; ?></title>
 </head>
 <body>
-    <?php 
-        foreach($Headers as $Header => $Link) {
-            echo "<a href=\"$Link\" alt=\"$Header\">{$Header}</a>\n";
-        }
-    ?>
-    <h1><?php echo "$Firstname $Lastname"?></h1>
-    <img src="https://avatars.githubusercontent.com/u/121501140?v=4" alt="Image of Jhong" />
-    <h2>Third Year Computer Science Student <br/> University of St. La Salle - Bacolod</h2>
+    <header>
+        <?php 
+            echo "<h1>{$Title} Page</h1>";
+            echo "<p>{$PageDescription}</p>";
+            foreach($Headers as $Header => $Link) {
+                echo "<a href=\"$Link\" alt=\"$Header\">{$Header}</a>\n";
+            }
+        ?>
+    </header>
+    <h1><?php echo "Hi! I'm $Firstname $Lastname"; ?></h1>
+    <img src="https://avatars.githubusercontent.com/u/121501140?v=4" alt="Image of Jhong" width="200"/>
     <blockquote>
         <strong>
             "Bigay mo sakin saber tol papatayin ko si wise level 4. Gusto ko lang sabihin na hindi madali yung ginagawa namin dito sa Showtime. Sorry direk sorry... Sample! Sample!"
         </strong> <br/> - Anonymous
     </blockquote>
+    <h2>Third Year Computer Science Student <br/> University of St. La Salle - Bacolod</h2>
+    <h3>Currently Learning: <?php echo $Learning; ?></h3>
+    <h3>Current Stack: React/NextJS, TypeScript, Firebase</h3>
+
     <h1>Personal Information</h1>
     <p>Nickname: Jhong</p>
     <p>Birthdate: <?php echo "$Birthdate $Birthmonth $Birthyear"; ?></p>
     <p>Zodiac Sign: <?php echo $ZodiacSign; ?></p>
-    <p>Civil Status: <?php echo $Status; ?></p>
+    <p>Relationship Status: <?php echo $Status; ?></p>
+    <p>Favorite Movie: <?php echo $FavoriteMovie; ?></p>
 </body>
 </html>
