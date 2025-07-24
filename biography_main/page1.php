@@ -20,6 +20,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me | <?php echo $Title; ?></title>
+    <script> 
+        const hideImage = () => document.getElementById('myImage').style.display = 'none'
+        const showImage = () => document.getElementById('myImage').style.display = 'inline'
+        const replaceText = () => {
+            const text = document.getElementById('welcome-guest');
+            const name = document.getElementById('guest').value;
+            text.innerHTML = `Hi ${name}!`;
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -31,13 +40,18 @@
             }
         ?>
     </header>
-    <h1><?php echo "Hi! I'm $Firstname $Lastname"; ?></h1>
-    <img src="https://avatars.githubusercontent.com/u/121501140?v=4" alt="Image of Jhong" width="200"/>
+    </br><input type="text" id="guest"/>
+    <button onclick="replaceText()">Submit</button>
+    <h1 id="welcome-guest">Hi Guest!</h1>
+    <h1><?php echo "I'm $Firstname $Lastname "; ?></h1>
+    <img src="https://avatars.githubusercontent.com/u/121501140?v=4" alt="Image of Jhong" width="200" id="myImage"/>
     <blockquote>
         <strong>
             "Bigay mo sakin saber tol papatayin ko si wise level 4. Gusto ko lang sabihin na hindi madali yung ginagawa namin dito sa Showtime. Sorry direk sorry... Sample! Sample!"
         </strong> <br/> - Anonymous
     </blockquote>
+    <button onclick="hideImage()">HIDE</button>
+    <button onclick="showImage()">SHOW</button>
     <h2>Third Year Computer Science Student <br/> University of St. La Salle - Bacolod</h2>
     <h3>Currently Learning: <?php echo $Learning; ?></h3>
     <h3>Current Stack: React/NextJS, TypeScript, Firebase</h3>
