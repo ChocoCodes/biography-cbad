@@ -45,6 +45,7 @@
     <h1 id="welcome-guest">Hi Guest!</h1>
     <h1><?php echo "I'm $Firstname $Lastname "; ?></h1>
     <img src="https://avatars.githubusercontent.com/u/121501140?v=4" alt="Image of Jhong" width="200" id="myImage"/>
+    <p id="date"></p>
     <blockquote>
         <strong>
             "Bigay mo sakin saber tol papatayin ko si wise level 4. Gusto ko lang sabihin na hindi madali yung ginagawa namin dito sa Showtime. Sorry direk sorry... Sample! Sample!"
@@ -62,5 +63,7 @@
     <p>Zodiac Sign: <?php echo $ZodiacSign; ?></p>
     <p>Relationship Status: <?php echo $Status; ?></p>
     <p>Favorite Movie: <?php echo $FavoriteMovie; ?></p>
+
+    <script src="datetime.js"></script>
 </body>
 </html>
