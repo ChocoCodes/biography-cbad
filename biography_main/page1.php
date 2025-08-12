@@ -17,9 +17,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me | <?php echo $Title; ?></title>
+    <title>About Me | <?=$Title; ?></title>
+    <script defer src="datetime.js"></script>
     <script> 
         const hideImage = () => document.getElementById('myImage').style.display = 'none'
         const showImage = () => document.getElementById('myImage').style.display = 'inline'
@@ -31,19 +32,31 @@
     </script>
 </head>
 <body>
-    <header>
-        <?php 
-            echo "<h1>{$Title} Page</h1>";
-            echo "<p>{$PageDescription}</p>";
-            foreach($Headers as $Header => $Link) {
-                echo "<a href=\"$Link\" alt=\"$Header\">{$Header}</a>\n";
-            }
-        ?>
-    </header>
+    <?php include('layout-header.php') ?>
+    <table class="container-fluid">
+        <thead>
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Birthday</th>
+                <th>Zodiac Sign</th>
+                <th>Currently Learning</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><?=$Firstname;?></td>
+                <td><?=$Lastname;?></td>
+                <td><?="$Birthdate $Birthmonth $Birthyear";?></td>
+                <td><?=$ZodiacSign;?></td>
+                <td><?=$Learning;?></td>
+            </tr>
+        </tbody>
+    </table>
     </br><input type="text" id="guest"/>
     <button onclick="replaceText()">Submit</button>
     <h1 id="welcome-guest">Hi Guest!</h1>
-    <h1><?php echo "I'm $Firstname $Lastname "; ?></h1>
+    <h1><?="I'm $Firstname $Lastname "; ?></h1>
     <img src="https://avatars.githubusercontent.com/u/121501140?v=4" alt="Image of Jhong" width="200" id="myImage"/>
     <p id="date"></p>
     <blockquote>
@@ -54,16 +67,17 @@
     <button onclick="hideImage()">HIDE</button>
     <button onclick="showImage()">SHOW</button>
     <h2>Third Year Computer Science Student <br/> University of St. La Salle - Bacolod</h2>
-    <h3>Currently Learning: <?php echo $Learning; ?></h3>
+    <h3>Currently Learning: <?=$Learning; ?></h3>
     <h3>Current Stack: React/NextJS, TypeScript, Firebase</h3>
 
-    <h1>Personal Information</h1>
-    <p>Nickname: Jhong</p>
-    <p>Birthdate: <?php echo "$Birthdate $Birthmonth $Birthyear"; ?></p>
-    <p>Zodiac Sign: <?php echo $ZodiacSign; ?></p>
-    <p>Relationship Status: <?php echo $Status; ?></p>
-    <p>Favorite Movie: <?php echo $FavoriteMovie; ?></p>
-
-    <script src="datetime.js"></script>
+    <!--
+        <h1>Personal Information</h1>
+        <p>Nickname: Jhong</p>
+        <p>Birthdate: </p>
+        <p>Zodiac Sign: <?=$ZodiacSign; ?></p>
+        <p>Relationship Status: <?=$Status; ?></p>
+        <p>Favorite Movie: <?=$FavoriteMovie; ?></p>
+    -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
 </body>
 </html>
