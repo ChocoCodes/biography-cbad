@@ -12,7 +12,6 @@
     <button id="toggle" onclick="toggleSwitch()">Turn On</button>
 
     <script>
-
         let bulb = document.getElementById('bulb')
         let toggle = document.getElementById('toggle')
         let isOn = false;
