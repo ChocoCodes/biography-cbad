@@ -44,7 +44,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
 </head>
-<body>
+<body class='d-flex flex-column gap-4'>
     <!--
         NOTE: Parenthesis can be omitted in PHP new versions (e.g: include 'file.php')
         include('file.php') -- every include statement, the component is added
@@ -83,7 +83,7 @@
             "Bigay mo sakin saber tol papatayin ko si wise level 4. Gusto ko lang sabihin na hindi madali yung ginagawa namin dito sa Showtime. Sorry direk sorry... Sample! Sample!"
         </strong> <br/> - Anonymous
     </blockquote>
-    <h2>Third Year Computer Science Student <br/> University of St. La Salle - Bacolod</h2>
+    <h2 class='mx-auto w-50 text-center'>Third Year Computer Science Student <br/> University of St. La Salle - Bacolod</h2>
     <?php include 'about-table.php' ?>
 </body>
 </html>
