@@ -62,10 +62,22 @@
             <p id="date"></p>
         </div>
     </div>
-    <h1><?="$Firstname $Lastname "; ?></h1>
-    <img src="https://avatars.githubusercontent.com/u/121501140?v=4" alt="Image of Jhong" width="200" id="myImage"/>
-    <button onclick="hideImage()">HIDE</button>
-    <button onclick="showImage()">SHOW</button>
+    <div class="container-fluid d-flex flex-column justify-content-center align-items-center">
+        <p class="fw-bold fs-2">Code References</p>
+        <div class="d-flex gap-2">
+            <a href="https://github.com/ChocoCodes/cbad-midterm-portfolio" target="_blank">My Midterm Portfolio</a>
+            <a href="https://github.com/ChocoCodes/datetime-float" target="_blank">DateTime and Float Act</a>
+            <a href="https://getbootstrap.com/" target="_blank">Bootstrap DOCS</a>
+        </div>
+    </div>
+    <h1 class="text-center"><?="$Firstname $Lastname "; ?></h1>
+    <div class="d-flex flex-column justify-items-center align-items-center gap-2">
+        <img src="https://avatars.githubusercontent.com/u/121501140?v=4" alt="Image of Jhong" width="200" id="myImage"/>
+        <div class="w-25 d-flex gap-2 mx-auto justify-items-center align-items-center">
+            <button onclick="hideImage()">HIDE</button>
+            <button onclick="showImage()">SHOW</button>
+        </div>
+    </div>
     <blockquote>
         <strong>
             "Bigay mo sakin saber tol papatayin ko si wise level 4. Gusto ko lang sabihin na hindi madali yung ginagawa namin dito sa Showtime. Sorry direk sorry... Sample! Sample!"
